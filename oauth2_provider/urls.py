@@ -33,7 +33,7 @@ token_management_urlpatterns = [
 ]
 
 
-urlpatterns = base_urlpatterns.copy()
+urlpatterns = list(base_urlpatterns)
 if oauth2_settings.ENABLE_APPLICATION_MANAGEMENT_VIEWS:
     urlpatterns.extend(application_management_urlpatterns)
 if oauth2_settings.ENABLE_TOKEN_MANAGEMENT_VIEWS:
